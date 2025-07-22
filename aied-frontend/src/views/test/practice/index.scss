@@ -1,0 +1,518 @@
+// aied-frontend/src/views/test/practice/index.scss
+h1 { // 居中
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button { // 居中
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: #45a049;
+    }
+    
+    &.admin-btn {
+      background-color: #ff6b35;
+      
+      &:hover {
+        background-color: #e55a2b;
+      }
+    }
+}
+
+.practice {
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+  
+    .question {
+      width: 50%;
+      padding: 20px;
+      border-right: 1px solid #4CAF50;
+  
+      h1 {
+        margin-top: 0;
+      }
+    }
+  
+    .answer {
+      width: 50%;
+      height: 100%;
+      padding: 20px;
+  
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .option {
+            display: flex;
+            flex-direction: row;
+        }
+      }
+
+      .short-answer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+        textarea {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+      }
+
+      .coding {
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+            textarea {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+      }
+
+      
+    }
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  
+    button {
+      width: 40%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  
+.practice-layout {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  .practice-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+      
+      .ant-breadcrumb {
+        margin: 0;
+        
+        .ant-breadcrumb-link {
+          color: #666;
+          
+          &:hover {
+            color: #1890ff;
+          }
+        }
+      }
+    }
+  }
+  
+  .practice-content {
+    height: calc(100vh - 64px);
+    padding: 24px;
+    overflow-y: auto;
+    
+    .practice-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      
+      .ant-card-head {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        
+        .ant-card-head-title {
+          padding: 16px 0;
+        }
+      }
+      
+      .ant-card-body {
+        padding: 24px;
+      }
+    }
+    
+    .question-card, .answer-card {
+      height: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      
+      .ant-card-head {
+        background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 12px 12px 0 0;
+        
+        .ant-card-head-title {
+          color: #1890ff;
+          font-weight: 600;
+          padding: 12px 0;
+        }
+      }
+      
+      .ant-card-body {
+        padding: 20px;
+        height: calc(100% - 57px);
+        overflow-y: auto;
+      }
+    }
+    
+    .result-card {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      
+      .ant-card-head {
+        background: linear-gradient(135deg, #f6ffed 0%, #f0f9ff 100%);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 12px 12px 0 0;
+        
+        .ant-card-head-title {
+          color: #52c41a;
+          font-weight: 600;
+          padding: 12px 0;
+        }
+      }
+    }
+    
+    .markdown-content {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      
+      h1, h2, h3, h4, h5, h6 {
+        color: #1890ff;
+        margin-top: 24px;
+        margin-bottom: 16px;
+        
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      
+      p {
+        margin-bottom: 16px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      
+      code {
+        background: rgba(0, 0, 0, 0.04);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+        color: #e74c3c;
+      }
+      
+      pre {
+        background: rgba(0, 0, 0, 0.02);
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        overflow-x: auto;
+        
+        code {
+          background: none;
+          padding: 0;
+          color: #333;
+        }
+      }
+      
+      blockquote {
+        border-left: 4px solid #1890ff;
+        padding: 12px 16px;
+        margin: 16px 0;
+        background: rgba(24, 144, 255, 0.02);
+        border-radius: 0 8px 8px 0;
+      }
+      
+      ul, ol {
+        padding-left: 24px;
+        margin: 16px 0;
+        
+        li {
+          margin-bottom: 8px;
+        }
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        
+        th, td {
+          border: 1px solid rgba(0, 0, 0, 0.06);
+          padding: 8px 12px;
+          text-align: left;
+        }
+        
+        th {
+          background: rgba(0, 0, 0, 0.02);
+          font-weight: 600;
+        }
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .katex {
+        font-size: 1.1em;
+      }
+      
+      .katex-display {
+        margin: 16px 0;
+        text-align: center;
+      }
+    }
+    
+    .choice-section {
+      .ant-radio-wrapper {
+        margin-bottom: 12px;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          border-color: #1890ff;
+          box-shadow: 0 2px 8px rgba(24, 144, 255, 0.1);
+        }
+        
+        &.ant-radio-wrapper-checked {
+          border-color: #1890ff;
+          background: rgba(24, 144, 255, 0.02);
+          box-shadow: 0 2px 8px rgba(24, 144, 255, 0.15);
+        }
+      }
+    }
+    
+    .short-answer-section, .coding-section {
+      .ant-input {
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #d9d9d9;
+        transition: all 0.3s ease;
+        
+        &:focus {
+          border-color: #1890ff;
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+        }
+      }
+    }
+    
+    .coding-section {
+      .ant-input {
+        font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .practice-layout {
+    .practice-header {
+      .header-content {
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+        
+        .ant-breadcrumb {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    
+    .practice-content {
+      padding: 16px;
+      height: calc(100vh - 120px);
+      
+      .ant-col {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+// 暗色主题支持
+@media (prefers-color-scheme: dark) {
+  .practice-layout {
+    background: linear-gradient(135deg, #2c3e50 0%, #3f4c6b 100%);
+    
+    .practice-header {
+      background: rgba(44, 62, 80, 0.95);
+      
+      .header-content {
+        .ant-breadcrumb {
+          .ant-breadcrumb-link {
+            color: #bdc3c7;
+            
+            &:hover {
+              color: #3498db;
+            }
+          }
+        }
+      }
+    }
+    
+    .practice-content {
+      .practice-card {
+        background: rgba(44, 62, 80, 0.95);
+        
+        .ant-card-head {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      }
+      
+      .question-card, .answer-card {
+        background: rgba(52, 73, 94, 0.98);
+        
+        .ant-card-head {
+          background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+          
+          .ant-card-head-title {
+            color: #3498db;
+          }
+        }
+      }
+      
+      .markdown-content {
+        color: #ecf0f1;
+        
+        h1, h2, h3, h4, h5, h6 {
+          color: #3498db;
+        }
+        
+        code {
+          background: rgba(255, 255, 255, 0.1);
+          color: #e74c3c;
+        }
+        
+        pre {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          
+          code {
+            background: none;
+            color: #ecf0f1;
+          }
+        }
+        
+        blockquote {
+          border-left: 4px solid #3498db;
+          background: rgba(52, 152, 219, 0.1);
+        }
+        
+        table {
+          th, td {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+          
+          th {
+            background: rgba(255, 255, 255, 0.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 自定义滚动条
+.practice-content {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+    
+    &:hover {
+      background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    }
+  }
+}
+
+// 动画效果
+.practice-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 按钮样式增强
+.ant-btn {
+  border-radius: 8px;
+  font-weight: 500;
+  
+  &.ant-btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    
+    &:hover {
+      background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+      box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.ant-btn-lg {
+    height: 48px;
+    padding: 0 24px;
+    font-size: 16px;
+  }
+}
+  

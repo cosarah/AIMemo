@@ -1,0 +1,330 @@
+.pg-home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  .home-content {
+    padding: 0;
+    background: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .dashboard-section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    
+    .ant-typography h2 {
+      color: white !important;
+      font-weight: 700 !important;
+      font-size: 2rem !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      
+      @media (max-width: 768px) {
+        font-size: 1.5rem !important;
+      }
+    }
+    
+    .stat-card {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px) !important;
+      border-radius: 12px !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+      transition: all 0.3s ease !important;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+      }
+      
+      .ant-statistic-title {
+        color: #666 !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+      }
+      
+      .ant-statistic-content {
+        font-size: 24px !important;
+        font-weight: 600 !important;
+      }
+    }
+    
+    .progress-card, .quick-actions-card {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px) !important;
+      border-radius: 12px !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+      
+      .ant-card-head {
+        background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+        border-radius: 12px 12px 0 0 !important;
+        
+        .ant-card-head-title {
+          color: #1890ff !important;
+          font-weight: 600 !important;
+        }
+      }
+      
+      .ant-progress {
+        margin: 8px 0 !important;
+      }
+      
+      .ant-btn {
+        border-radius: 8px !important;
+        font-weight: 500 !important;
+        transition: all 0.3s ease !important;
+        
+        &.ant-btn-primary {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+          border: none !important;
+          box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3) !important;
+          
+          &:hover {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%) !important;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+            transform: translateY(-1px) !important;
+          }
+        }
+        
+        &.ant-btn-dangerous {
+          background: linear-gradient(135deg, #ff7875 0%, #ff4d4f 100%) !important;
+          border: none !important;
+          color: white !important;
+          
+          &:hover {
+            background: linear-gradient(135deg, #ff4d4f 0%, #f5222d 100%) !important;
+            transform: translateY(-1px) !important;
+          }
+        }
+      }
+    }
+    
+    .ant-badge {
+      .ant-badge-count {
+        background: #ff4d4f !important;
+        box-shadow: 0 2px 8px rgba(255, 77, 79, 0.3) !important;
+      }
+    }
+  }
+
+  .hero-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    
+    .hero-title {
+      font-size: 4rem !important;
+      font-weight: 700 !important;
+      color: white !important;
+      margin-bottom: 1rem !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      
+      @media (max-width: 768px) {
+        font-size: 3rem !important;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+      margin-bottom: 1rem !important;
+      font-weight: 500;
+      
+      @media (max-width: 768px) {
+        font-size: 1.2rem !important;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.1rem !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      margin-bottom: 3rem !important;
+      max-width: 600px;
+      
+      @media (max-width: 768px) {
+        font-size: 1rem !important;
+      }
+    }
+
+    .primary-btn {
+      background: linear-gradient(45deg, #ff6b6b, #ff8e8e) !important;
+      border: none !important;
+      border-radius: 25px !important;
+      height: 50px !important;
+      padding: 0 2rem !important;
+      font-size: 1.1rem !important;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4) !important;
+        background: linear-gradient(45deg, #ff5252, #ff7979) !important;
+      }
+    }
+
+    .ant-btn-default {
+      background: rgba(255, 255, 255, 0.1) !important;
+      border: 2px solid rgba(255, 255, 255, 0.3) !important;
+      color: white !important;
+      border-radius: 25px !important;
+      height: 50px !important;
+      padding: 0 2rem !important;
+      font-size: 1.1rem !important;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.5) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  .features-section {
+    padding: 5rem 2rem;
+    background: #f8f9fa;
+    
+    .ant-typography h2 {
+      color: #2c3e50 !important;
+      font-weight: 700 !important;
+      font-size: 2.5rem !important;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem !important;
+      }
+    }
+    
+    .feature-card {
+      border-radius: 15px !important;
+      border: none !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+      transition: all 0.3s ease !important;
+      height: 280px;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+      }
+      
+      .ant-card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      
+      .ant-typography h4 {
+        color: #2c3e50 !important;
+        font-weight: 600 !important;
+        font-size: 1.3rem !important;
+      }
+      
+      .ant-typography p {
+        color: #6c757d !important;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 1200px) {
+    .features-section {
+      padding: 4rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 1.5rem;
+      
+      .ant-space-item {
+        width: 100%;
+        
+        .ant-btn {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .features-section {
+      padding: 3rem 1rem;
+      
+      .feature-card {
+        height: auto;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // 覆盖 Ant Design 默认样式
+  .ant-layout {
+    background: transparent !important;
+  }
+
+  .ant-layout-content {
+    background: transparent !important;
+  }
+}
+
+// 用户信息栏样式
+.user-info-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  .user-welcome {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    .welcome-text {
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .user-dropdown {
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(24, 144, 255, 0.1);
+      }
+      
+      .ant-avatar {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .user-info-bar {
+    padding: 1rem;
+    
+    .user-welcome {
+      .welcome-text {
+        display: none;
+      }
+    }
+  }
+}
